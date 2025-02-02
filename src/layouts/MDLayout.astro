@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TableOfContents from '@/components/pages/posts/TableOfContents.astro';
+import Prose from '@/components/pages/posts/Prose.astro';
+import { Image } from 'astro:assets';
+import { images } from '@/utils/imageHandler';
+import { formatDate } from '@/utils/formatDate';
+import { generateJsonLd } from '@/utils/generateBlogSchema';
+
+const { data, headings } = Astro.props;
+
+const schema = generateJsonLd(data, Astro.request.url);
+---
+
+<BaseLayout {...data}>
+  <script is:inline slot="head" type="application/ld+json" set:html={schema} />
+  <div
+    class="grid grid-cols-1 justify-center lg:grid-cols-[1fr_240px] 2xl:grid-cols-[240px_1fr_240px]">
+    <div class="hidden 2xl:block"></div>
+    <article class="mx-6 xs:mx-10">
+      <Prose>
+        <div class="mb-1 flex justify-start">
+          <span
+            class="written-by max-w-fit rounded-md bg-accent-300/25 px-2 py-1 text-sm text-accent-500 dark:bg-accent-700/25 dark:text-accent-400">
+            Written by {data.author} on {
+              formatDate(data.pubDate, {
+                weekday: 'long',
+              })
+            }
+          </span>
+        </div>
+        <h1>{data.title}</h1>
+        {
+          data.image && (
+            <Image
+              src={images[data.image.url]()}
+              width={data.image.width}
+              height={data.image.height}
+              alt={data.image.alt}
+            />
+          )
+        }
+        <p>{data.description}</p>
+        <slot />
+      </Prose>
+    </article>
+    <div
+      class="hidden min-h-full prose-a:transition-colors prose-a:duration-100 lg:block">
+      <TableOfContents headings={headings} />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+const { class: className, heading, isSubheading, level = 0 } = Astro.props;
+---
+
+<li class={className}>
+  <a href={'#' + heading.slug} class="group mt-0 flex items-start no-underline">
+    <div
+      class:list={[
+        'mx-2 mt-1 flex-shrink-0 dark:group-hover:stroke-primary-300',
+        isSubheading ? '' : 'hidden',
+        level === 2
+          ? 'stroke-primary-400 group-hover:stroke-primary-400/50 dark:stroke-primary-500'
+          : 'stroke-primary-600 group-hover:stroke-primary-400/80 dark:stroke-primary-400',
+      ]}
+    ></div>
+    {heading.text}
+  </a>
+  {
+    heading.subheadings.length > 0 && (
+      <ul class={`${isSubheading ? 'ml-2' : ''} my-0 list-none px-0`}>
+        {heading.subheadings.map((subheading: string) => (
+          <Astro.self
+            className="px-0"
+            heading={subheading}
+            isSubheading={true}
+            level={level + 1}
+          />
+        ))}
+      </ul>
+    )
+  }
+</li>
+
+<style>
+  li:has(.active) > a {
+    /* @apply text-accent-400; */
+  }
+
+  :root:is(.dark) li:has(.active) > a {
+    /* @apply text-accent-300; */
+  }
+
+  a:hover {
+    @apply text-foreground/80;
+  }
+</style>

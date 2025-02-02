@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Astro Boilerplate",
+  "version": "1.0",
+  "description": "A boilerplate for Astro projects.",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Astro Boilerplate",
+  "start_url": "/",
+  "theme_color": "#020817",
+  "background_color": "#020817",
+  "icons": [
+    {
+      "src": "/apple-touch-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "/mstile-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "lang": "en"
+}

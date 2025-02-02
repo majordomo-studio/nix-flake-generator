@@ -1,0 +1,21 @@
+---
+import { Github, Linkedin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const { platform } = Astro.props as { platform: 'Github' | 'Linkedin' };
+
+const socialLinks = {
+  Github: 'https://github.com/guruguhangunaratnam/',
+  Linkedin: 'https://www.linkedin.com/in/guruguhangunaratnam/',
+};
+
+const PlatformIcon = platform === 'Github' ? Github : Linkedin;
+---
+
+<Button variant="ghost" size="icon" id="socialLinks">
+  <a
+    href={socialLinks[platform]}
+    aria-label={`${platform} Profile`}>
+    <PlatformIcon className="h-[1.5rem] w-[1.3rem]" />
+  </a>
+</Button>

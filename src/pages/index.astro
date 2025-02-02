@@ -1,0 +1,25 @@
+---
+import { db, BaseFlake, Package } from 'astro:db';
+import FlakeWizard from '../components/FlakeWizard';
+
+const baseFlakes = await db.select().from(BaseFlake);
+const packages = await db.select().from(Package);
+
+// Separate OS and dev environment flakes.
+const osFlakes = baseFlakes.filter(flake => flake.type === 'os');
+const devFlakes = baseFlakes.filter(flake => flake.type === 'dev');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nix Flake Generator</title>
+  </head>
+  <body class="p-8">
+    <main>
+      <h1 class="text-3xl font-bold mb-4">Nix Flake Generator</h1>
+      <!-- Use client:only so that the wizard is never rendered during SSR -->
+      <FlakeWizard client:only="react" osFlakes={osFlakes} devFlakes={devFlakes} packages={packages} />
+    </main>
+  </body>
+</html>

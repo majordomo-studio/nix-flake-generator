@@ -1,0 +1,277 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { buttonVariants } from '@/components/ui/button'
+import { ExampleAccordian } from '@/components/react/ExampleAccordian';
+import { ExampleAlert } from '@/components/react/ExampleAlert';
+import { ExampleAlertDialog } from '@/components/react/ExampleAlertDialog';
+// import { ExampleAspectRatio } from '@/components/react/ExampleAspectRatio';
+import { ExampleAvatar } from '@/components/react/ExampleAvatar';
+import { ExampleBadge } from '@/components/react/ExampleBadge';
+import { ExampleBreadcrumb } from '@/components/react/ExampleBreadcrumb';
+import { ExampleButton } from '@/components/react/ExampleButton';
+import { ExampleCalendar } from '@/components/react/ExampleCalendar';
+import { ExampleCardWithForm } from '@/components/react/ExampleCard';
+import { ExampleCarousel } from '@/components/react/ExampleCarousel';
+import { ExampleChart } from '@/components/react/ExampleChart';
+import { ExampleCheckbox } from '@/components/react/ExampleCheckbox';
+import { ExampleCollapsible } from '@/components/react/ExampleCollapsible';
+import { ExampleCommand } from '@/components/react/ExampleCommand';
+import { ExampleContextMenu } from '@/components/react/ExampleContextMenu';
+import { ExampleDialog } from '@/components/react/ExampleDialog';
+import { ExampleDrawer } from '@/components/react/ExampleDrawer';
+import { ExampleDropdownMenu } from '@/components/react/ExampleDropdownMenu';
+// import { ExampleForm } from '@/components/react/ExampleForm';
+import { ExampleHoverCard } from '@/components/react/ExampleHoverCard';
+import { ExampleInput } from '@/components/react/ExampleInput';
+import { ExampleInputOTP } from '@/components/react/ExampleInputOTP';
+import { ExampleLabel } from '@/components/react/ExampleLabel';
+import { ExampleMenubar } from '@/components/react/ExampleMenubar';
+// import { ExampleNavigationMenu } from '@/components/react/ExampleNavigationMenu';
+import { ExamplePagination } from '@/components/react/ExamplePagination';
+import { ExamplePopover } from '@/components/react/ExamplePopover';
+import { ExampleProgress } from '@/components/react/ExampleProgress';
+import { ExampleRadioGroup } from '@/components/react/ExampleRadioGroup';
+import { ExampleResizable } from '@/components/react/ExampleResizable';
+import { ExampleScrollArea } from '@/components/react/ExampleScrollArea';
+import { ExampleSelect } from '@/components/react/ExampleSelect';
+import { ExampleSeparator } from '@/components/react/ExampleSeparator';
+import { ExampleSheet } from '@/components/react/ExampleSheet';
+import { ExampleSkeleton } from '@/components/react/ExampleSkeleton';
+import { ExampleSlider } from '@/components/react/ExampleSlider';
+import { ExampleSwitch } from '@/components/react/ExampleSwitch';
+import { ExampleTable } from '@/components/react/ExampleTable';
+import { ExampleTabs } from '@/components/react/ExampleTabs';
+import { ExampleTextArea } from '@/components/react/ExampleTextArea';
+import { ExampleToast } from '@/components/react/ExampleToast';
+import { ExampleToggle } from '@/components/react/ExampleToggle';
+import { ExampleToggleGroup } from '@/components/react/ExampleToggleGroup';
+import { ExampleTooltip } from '@/components/react/ExampleTooltip';
+---
+
+<BaseLayout
+  title="Astro Shadcn UI Components"
+  description="These components helps you build apps with Astro, Tailwind CSS, and Shadcn UI."
+>
+  <section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+    <div class="flex max-w-[980px] flex-col items-start gap-2">
+      <h1
+        class="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl"
+      >
+        Astro Shadcn UI Components <br class="hidden sm:inline" />
+        built with Radix UI and Tailwind CSS.
+      </h1>
+      <p class="max-w-[700px] text-lg text-muted-foreground">
+        Accessible and customizable components that you can copy and paste into
+        your apps. Free. Open Source.
+      </p>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Accordian</h2>
+        <ExampleAccordian client:load />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Alert</h2>
+        <ExampleAlert />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Alert Dialog</h2>
+        <ExampleAlertDialog client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <!-- <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Aspect Ratio</h2>
+        <ExampleAspectRatio client:load />
+      </div> -->
+      <div class="w-1/5">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Avatar</h2>
+        <ExampleAvatar />
+      </div>
+      <div class="w-1/5">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Badge</h2>
+        <ExampleBadge client:load />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Breadcrumb</h2>
+        <ExampleBreadcrumb client:load />
+      </div>
+      <div class="w-1/5">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Button</h2>
+        <ExampleButton client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Calendar</h2>
+        <ExampleCalendar client:load />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Card with Form</h2>
+        <ExampleCardWithForm />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Carousel</h2>
+        <ExampleCarousel client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-3/4">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Chart</h2>
+          <ExampleChart />
+      </div>
+      <div class="w-1/4">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Checkbox</h2>
+          <ExampleCheckbox />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Collapsible</h2>
+        <ExampleCollapsible client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Command</h2>
+          <ExampleCommand client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Context Menu</h2>
+          <ExampleContextMenu client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Dialog</h2>
+        <ExampleDialog client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Drawer</h2>
+          <ExampleDrawer client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Dropdown Menu</h2>
+          <ExampleDropdownMenu client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <!-- <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Form</h2>
+        <ExampleForm client:load />
+      </div> -->
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Hover Card</h2>
+          <ExampleHoverCard client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Input</h2>
+          <ExampleInput client:load />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Input OTP</h2>
+        <ExampleInputOTP client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Label</h2>
+          <ExampleLabel client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Menubar</h2>
+          <ExampleMenubar client:load />
+      </div>
+      <!-- <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Navigation Menu</h2>
+        <ExampleNavigationMenu client:load />
+      </div> -->
+    </div>
+    <div class="flex gap-4">
+      <!-- <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Pagination</h2>
+          <ExamplePagination client:load />
+      </div> -->
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Popover</h2>
+          <ExamplePopover client:load />
+      </div>
+      <div class="w-1/3">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Progress</h2>
+        <ExampleProgress client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Radio Group</h2>
+          <ExampleRadioGroup />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Resizable</h2>
+          <ExampleResizable client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Scroll Area</h2>
+          <ExampleScrollArea client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Select</h2>
+          <ExampleSelect />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Separator</h2>
+          <ExampleSeparator />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Sheet</h2>
+          <ExampleSheet client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Skeleton</h2>
+          <ExampleSkeleton client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Slider</h2>
+          <ExampleSlider />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Switch</h2>
+          <ExampleSwitch client:load />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Table</h2>
+          <ExampleTable />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Tabs</h2>
+          <ExampleTabs client:load />
+      </div>
+      <div class="w-1/3">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Text Area</h2>
+          <ExampleTextArea />
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-1/4">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Toast</h2>
+          <ExampleToast client:load />
+      </div>
+      <div class="w-1/4">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Toggle</h2>
+          <ExampleToggle client:load />
+      </div>
+      <div class="w-1/4">
+          <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Toggle Group</h2>
+          <ExampleToggleGroup client:load />
+      </div>
+      <div class="w-1/4">
+        <h2 class="my-4 mr-4 flex text-2xl font-bold leading-tight tracking-tighter md:text-3xl">Tooltip</h2>
+        <ExampleTooltip client:load />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
